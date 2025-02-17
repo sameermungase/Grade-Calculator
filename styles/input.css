@@ -1,0 +1,16 @@
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .subject-row {
+        grid-template-columns: 1fr 1fr;
+        gap: 8px;
+    }
+    
+    .subject-row > * {
+        grid-column: span 2;
+    }
+    
+    .subject-row span {
+        grid-column: span 2;
+        text-align: center;
+    }
+} 

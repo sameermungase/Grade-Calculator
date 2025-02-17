@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SGPA Calculator</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gradient-to-br from-indigo-50 to-blue-50 min-h-screen flex flex-col items-center">
+    <nav class="bg-white shadow-sm mb-8 w-full">
+        <div class="max-w-5xl mx-auto px-4 py-3">
+            <div class="flex justify-between items-center">
+                <h1 class="text-xl font-bold text-indigo-900">Grade Calculator</h1>
+                <a href="cgpa.html" class="inline-flex items-center px-6 py-2.5 bg-indigo-600 text-white font-medium rounded-lg 
+                   hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500
+                   transition-all duration-200 ease-in-out gap-2 min-w-[200px] justify-center">Switch to CGPA Calculator</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container max-w-5xl w-full px-6" data-aos="fade-up">
+        <h1 class="text-3xl font-bold text-center mb-8 text-indigo-900">
+            SGPA Calculator
+            <span class="block text-sm text-gray-500 mt-2">Calculate your semester SGPA</span>
+        </h1>
+
+        <div class="bg-white p-8 rounded-xl shadow-md w-full" data-aos="fade-up" data-aos-delay="100">            
+            <div class="flex items-center gap-6 mb-6">
+                <label for="subject-count" class="text-gray-700 font-medium min-w-[160px]">Number of Subjects:</label>
+                <input type="number" id="subject-count" min="1" max="12" value="1" 
+                       class="w-28 text-center focus:ring-2 focus:ring-indigo-500 h-11">
+                <button id="add-subjects" class="inline-flex items-center px-6 py-2.5 bg-sky-400 text-white font-medium rounded-lg 
+                       hover:bg-sky-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-sky-400
+                       transition-all duration-200 ease-in-out gap-2 min-w-[200px] justify-center">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"/>
+                    </svg>
+                    Generate Fields
+                </button>
+            </div>
+
+            <div id="subjects-container" class="space-y-4 mb-6"></div>
+
+            <button id="calculate-sgpa" class="inline-flex items-center justify-center px-6 py-3 bg-indigo-600 text-white 
+                   font-medium rounded-lg hover:bg-white-700 focus:outline-none focus:ring-2 focus:ring-offset-2 
+                   focus:ring-indigo-500 transition-all duration-200 ease-in-out gap-2 w-full">Calculate SGPA</button>
+
+            <div id="result" class="mt-8 p-8 bg-gradient-to-r from-indigo-600 to-blue-600 rounded-xl text-white 
+                 shadow-lg w-full hidden"></div>
+        </div>
+    </div>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 800,
+            once: true
+        });
+    </script>
+    <script type="module" src="js/gpa/main.js"></script>
+</body>
+</html> 
