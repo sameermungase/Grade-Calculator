@@ -1,5 +1,5 @@
 # Grade Calculator
 
-A web application to calculate SGPA and CGPA.
+A web application to calculate SGPA and CGPA for Government college of engineering Aurangabad, Chhatrapati Sambhajinagar
 
-Visit: [https://YOUR_USERNAME.github.io/grade-calculator/](https://YOUR_USERNAME.github.io/grade-calculator/)
+Visit: [(https://sameermungase.github.io/Grade-Calculator/)](https://sameermungase.github.io/Grade-Calculator/)
