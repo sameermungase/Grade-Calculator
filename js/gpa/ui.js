@@ -1,9 +1,9 @@
-import { gradeValues } from '../config/grades.js';
+import { gradeValues } from '../../config/grades.js';
 
 export class UI {
     static createSubjectRow(number) {
         const row = document.createElement('div');
-        row.className = 'grid grid-cols-[100px_1fr_100px_100px_60px] items-center gap-4 p-4 bg-white rounded-lg shadow-sm';
+        row.className = 'subject-row grid grid-cols-[100px_1fr_100px_100px_60px] items-center gap-4 p-4 bg-white rounded-lg shadow-sm';
         
         const label = document.createElement('span');
         label.textContent = `Subject ${number}`;

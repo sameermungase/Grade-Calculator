@@ -1,4 +1,4 @@
-import { gradeValues } from '../config/grades.js';
+import { gradeValues } from '../../config/grades.js';
 
 export class Calculator {
     static calculateGPA() {
